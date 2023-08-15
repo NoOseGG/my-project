@@ -1,0 +1,33 @@
+.aside {
+    grid-area: aside;
+    border: 1px solid #000;
+    text-align: center;
+}
+
+.menu {
+
+}
+
+.list {
+    padding: 0;
+}
+
+.item {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.link {
+    text-decoration: none;
+    color: inherit;
+    font-size: 30px;
+}
+
+.link:hover {
+    color: gold;
+}
+
+.link:focus {
+    color: gold;
+}

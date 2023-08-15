@@ -1,0 +1,22 @@
+.userPage {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    width: 200px;
+    height: 200px;
+}
+
+.info {
+    margin-left: 10px;
+}
+
+.name {
+    font-size: 40px;
+}
+
+.birthday {
+    font-size: 30px;
+}

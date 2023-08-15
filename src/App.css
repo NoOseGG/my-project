@@ -1,0 +1,12 @@
+.App {
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: 95px auto 95px;
+  grid-template-columns: 450px auto auto;
+  grid-template-areas:
+  "header header header header"
+  "aside main main main"
+  "footer footer footer footer";
+  padding: 10px;
+  gap: 10px;
+}

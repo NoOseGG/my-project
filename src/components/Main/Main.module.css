@@ -1,0 +1,4 @@
+.main {
+    grid-area: main;
+    border: 1px solid #000;
+}
