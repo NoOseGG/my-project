@@ -3,13 +3,15 @@ import styles from './Main.module.css'
 import {Route, Routes} from "react-router-dom";
 import Profile from "./Profile/Profile";
 import Messages from "./Messages/Messages";
+import Api from "./Api/Api";
 
 const Main = (props) => {
     return (
         <div className={styles.main}>
                 <Routes>
-                    <Route path="/profile" element={<Profile posts={props.posts}/>}></Route>
+                    <Route path="/profile" element={<Profile posts={props.posts} addPost={props.addPost}/>}></Route>
                     <Route path="/messages" element={<Messages />}></Route>
+                    <Route path="/api" element={<Api />}></Route>
                 </Routes>
         </div>
     )

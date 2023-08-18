@@ -9,7 +9,7 @@ function App(props) {
         <div className="App">
             <Header/>
             <Aside/>
-            <Main posts={props.posts}/>
+            <Main posts={props.posts} addPost={props.addPost}/>
             <Footer />
         </div>
     );

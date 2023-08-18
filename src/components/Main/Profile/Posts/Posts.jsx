@@ -1,10 +1,14 @@
 import React from 'react'
 import styles from './Posts.module.css'
 import Post from "./Post/Post";
+import {useSelector} from "react-redux";
 
 const Posts = (props) => {
 
-    let posts = props.posts.map(
+    const postsSelect = useSelector(state => state.posts.posts)
+    debugger
+
+    let posts = postsSelect.map(
         (el) => {
             return <Post post={el}/>
         }

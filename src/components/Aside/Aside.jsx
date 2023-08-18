@@ -13,6 +13,9 @@ const Aside = () => {
                     <li className={styles.item}>
                         <NavLink className={styles.link} to="/messages">Messages</NavLink>
                     </li>
+                    <li className={styles.item}>
+                        <NavLink className={styles.link} to="/api">Api</NavLink>
+                    </li>
                 </ul>
             </nav>
         </div>
