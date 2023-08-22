@@ -15,8 +15,15 @@ const Content = () => {
 
     return(
         <div className={styles.container}>
+            <div className={styles.unn}>
+                <strong>УНП:</strong> {data.results[0].unn}
+            </div>
             <div className={styles.registration}>
-                {data.age_full}
+                <strong>Дата регистрации:</strong> {data.results[0].date_reg}
+            </div>
+
+            <div className={styles.fullName}>
+                <strong>Полное название:</strong> {data.results[0].full_name}
             </div>
         </div>
     )

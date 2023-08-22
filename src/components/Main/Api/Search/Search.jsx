@@ -1,7 +1,7 @@
 import React, {useRef} from 'react'
 import styles from './Search.module.css'
 import {useDispatch, useSelector} from "react-redux";
-import {fetchData} from "../../../../redux/FetchData";
+import {fetchData} from "../../../../redux/Reducers/Api/FetchData";
 
 const Search = () => {
     const dispatch = useDispatch()

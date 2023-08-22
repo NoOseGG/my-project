@@ -5,6 +5,10 @@ import {NavLink} from "react-router-dom";
 
 const Header = () => {
 
+    const handlerLogOut = () => {
+
+    }
+
     return (
         <div className={styles.header}>
             <img className={styles.logo} src="https://vailskibase.com/wp-content/uploads/2021/09/Salomon-logo.png"
@@ -16,6 +20,9 @@ const Header = () => {
                 </button>
                 <button className={styles.registration__btn}>
                     <NavLink className={styles.login__link} to="/registration">Registration</NavLink>
+                </button>
+                <button className={styles.logout__btn}>
+                    LogOut
                 </button>
             </div>
         </div>

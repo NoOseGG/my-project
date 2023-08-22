@@ -1,7 +1,7 @@
 import React, {useRef} from 'react'
 import styles from './AddPost.module.css'
 import {useDispatch, useSelector} from "react-redux";
-import {ACTION_ADD_POST} from "../../../../redux/PostReducer";
+import {ACTION_ADD_POST} from "../../../../redux/Reducers/Posts/PostReducer";
 
 const AddPost = (props) => {
     const newMessageElement = useRef()

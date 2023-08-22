@@ -1,10 +1,16 @@
-import {FETCH_DATA_FAILURE, FETCH_DATA_REQUEST, FETCH_DATA_SUCCESS, fetchDataRequest} from "./Actions";
+import {FETCH_DATA_FAILURE, FETCH_DATA_REQUEST, FETCH_DATA_SUCCESS, fetchDataRequest} from "../../Actions";
 
 export const GET_UPN = "GET_UPN"
 
 const defaultState = {
     data: {
-        name: 'noose'
+        results: [
+            {
+                unn: "",
+                date_reg: "",
+                full_name: ""
+            }
+        ]
     },
     loading: false,
     error: null
