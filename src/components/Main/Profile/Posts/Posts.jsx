@@ -6,7 +6,6 @@ import {useSelector} from "react-redux";
 const Posts = (props) => {
 
     const postsSelect = useSelector(state => state.posts.posts)
-    debugger
 
     let posts = postsSelect.map(
         (el) => {

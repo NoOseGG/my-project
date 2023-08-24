@@ -1,18 +1,22 @@
 import React, {useEffect, useRef, useState} from 'react';
 import styles from './Login.module.css'
 import axios from "axios";
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {fetchAuth} from "../../../redux/Reducers/LogIn/FetchAuth";
+
+export const TOKEN = "TOKEN"
 
 const Login = () => {
 
     const [email, setEmail] = useState()
     const [password, setPassword] = useState()
     const dispatch = useDispatch()
+    const token = useSelector(state => state.login.token)
 
     useEffect(() => {
-        console.log(`${email} ${password}`)
-    }, [email, password])
+        console.log(`TOKEN: ${token}`)
+        localStorage.setItem(TOKEN, token)
+    }, [token])
 
     const logIn = () => {
         console.log('login')

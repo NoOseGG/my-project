@@ -10,7 +10,7 @@ const Content = () => {
     console.log(data)
 
     useEffect(() => {
-        console.log(data)
+        console.log(`DATA: ${data}`)
     }, [data])
 
     return(

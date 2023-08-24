@@ -8,7 +8,7 @@ import {LogInReducer} from "./Reducers/LogIn/LogInReducer";
 const rootReducer = combineReducers({
     posts: postReducer,
     api: apiReducer,
-    auth: LogInReducer
+    login: LogInReducer
 })
 
 export const store = createStore(rootReducer, applyMiddleware(thunkMiddleware))
