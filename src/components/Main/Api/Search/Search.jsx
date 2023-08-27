@@ -6,28 +6,31 @@ import {fetchData} from "../../../../redux/Reducers/Api/FetchData";
 const Search = () => {
     const dispatch = useDispatch()
     const inputRef = useRef()
-    const upn = useSelector(state => state.api.upn)
+    // const upn = useSelector(state => state.api.upn)
 
     const searchUpn = () => {
         let unp = inputRef.current.value
-        console.log('click')
+        console.log(`unp: ${unp}`)
         dispatch(fetchData(unp))
     }
 
     return (
         <div className={styles.counter}>
-            <input
-                className={styles.input}
-                ref={inputRef}
-                type="text"
-                placeholder="search"
-            />
-            <button
-                className={styles.send__btn}
-                onClick={searchUpn}
-            >
-                Send
-            </button>
+            {/*<input*/}
+            {/*    className={styles.input}*/}
+            {/*    ref={inputRef}*/}
+            {/*    type="text"*/}
+            {/*    placeholder="search"*/}
+            {/*    onChange={searchUpn}*/}
+            {/*/>*/}
+            {/*<button*/}
+            {/*    className={styles.send__btn}*/}
+            {/*    onClick={searchUpn}*/}
+            {/*>*/}
+            {/*    Send*/}
+            {/*</button>*/}
+
+
         </div>
     )
 }

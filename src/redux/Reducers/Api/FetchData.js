@@ -8,6 +8,7 @@ export const fetchData = (unp) => {
 
         axios.get(`http://93.125.0.140:1338/api/v1/profile_search/?val=${unp}`)
             .then(response => {
+                dispatch(fetchDataRequest())
                 const data = response.data;
                 console.log(data)
                 dispatch(fetchDataSuccess(data));

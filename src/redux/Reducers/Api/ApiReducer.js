@@ -4,13 +4,7 @@ export const GET_UPN = "GET_UPN"
 
 const defaultState = {
     data: {
-        results: [
-            {
-                unn: "",
-                date_reg: "",
-                full_name: ""
-            }
-        ]
+        results: []
     },
     loading: false,
     error: null

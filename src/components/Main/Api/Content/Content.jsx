@@ -1,30 +1,41 @@
 import React, {useEffect, useState} from 'react'
 import styles from './Content.module.css'
 import {useSelector} from "react-redux";
-import axios from "axios";
+import Item from "./Item/Item";
+import item from "./Item/Item";
 
 const Content = () => {
 
-    const data = useSelector(state => state.api.data)
+    const {data, loading, error} = useSelector(state => state.api)
+    const [items, setItems] = useState([])
 
     console.log(data)
 
     useEffect(() => {
         console.log(`DATA: ${data}`)
+        if (typeof data.results !== 'undefined') {
+            const items = data.results.map(item => {
+                    return <Item item={item}/>
+                }
+            )
+            setItems(items)
+        }
+
     }, [data])
 
-    return(
-        <div className={styles.container}>
-            <div className={styles.unn}>
-                <strong>УНП:</strong> {data.results[0].unn}
-            </div>
-            <div className={styles.registration}>
-                <strong>Дата регистрации:</strong> {data.results[0].date_reg}
-            </div>
 
-            <div className={styles.fullName}>
-                <strong>Полное название:</strong> {data.results[0].full_name}
-            </div>
+    useEffect(() => {
+        console.log("LOADING")
+    }, [loading])
+
+    useEffect(() => {
+        console.log("ERROR")
+    }, [error])
+
+
+    return (
+        <div className={styles.container}>
+            {items}
         </div>
     )
 }

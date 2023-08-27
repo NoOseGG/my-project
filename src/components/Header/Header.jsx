@@ -39,7 +39,7 @@ const Header = () => {
             <div className={styles.login}>
                 <button className={styles.login__btn}>
                     <NavLink className={styles.login__link} to="/login">
-                        {userName}
+                        { userName === "" ? "LogIn" : userName.split("@")[0] }
                     </NavLink>
                 </button>
                 <button className={styles.registration__btn}>
